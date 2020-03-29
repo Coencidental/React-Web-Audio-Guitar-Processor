@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+button {
+  border: 1px solid black;
+  cursor: grab;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+
+  .buttons {
+    width: 100%;
+
+    button {
+      width: 25%;
+      
+      border-bottom: none;
+      padding: 1rem;
+
+      &:first-of-type {
+        border-right: none;
+      }
+    }
+  }
+
+  .sliders {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.slider {
+  border: 1px solid black;
+  width: 25%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
+
+  &:first-of-type {
+    border-right: none;
+  }
+
+  p {
+    margin-bottom: 5rem;
+  }
+  input {
+    transform: rotate(90deg);
+  }
+}
+
+#record {
+  width: 50%;
+  padding: 2rem;
+  background: rgb(255, 78, 78);
+}
+
+#waveform {
+  width: 50%;
+  height: 10rem;
+  background: white;
+  filter: invert(1);
+}
